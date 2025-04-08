@@ -1,18 +1,36 @@
-# Ignore Python cache and environment
+# === ENVIRONMENTS ===
 venv/
+.env
+*.env
+
+# === PYTHON CACHES ===
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyo
 
-# VS Code folders
-.vscode/
-
-# Jupyter checkpoints
+# === JUPYTER ===
 *.ipynb_checkpoints/
 
-# OS junk
+# === VS CODE ===
+.vscode/
+
+# === OS FILES ===
 .DS_Store
 Thumbs.db
 
-# Log & temp
+# === LOGS ===
 *.log
 *.tmp
+
+# === DATA FOLDERS ===
+
+# 🚫 Ignore all private data
+data/private/
+!data/private/.gitkeep
+
+# ✅ Track everything else in data/
+!data/public/
+
+# Optional: Ignore large output result files
+# results/*.csv
+# plots/*.png
