@@ -45,34 +45,23 @@ If you are cloning this repo and want to use the imaging data, you must download
 
 ## ⚙️ Setup Instructions
 
-To run this project locally, follow these steps to set up a clean Python environment using `requirements.txt`.
-
----
+Follow these steps to set up and run the project locally.
 
 ### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/MOHAMED-ALI96/Thesis-Allometric-REE.git
 cd Thesis-Allometric-REE
-2. Create a Virtual Environment
-You only need to do this once per machine.
 
-Windows:
-
-bash
-Copy
-Edit
+# Windows
 python -m venv venv
 venv\Scripts\activate
-macOS/Linux:
 
-bash
-Copy
-Edit
+# macOS/Linux
 python3 -m venv venv
 source venv/bin/activate
-3. Install Required Packages
-Install the minimal required Python libraries for this project using:
+
+pip install -r requirements.txt
 
 bash
 Copy
