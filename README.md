@@ -63,41 +63,4 @@ source venv/bin/activate
 
 pip install -r requirements.txt
 
-bash
-Copy
-Edit
-pip install -r requirements.txt
-4. Launch Jupyter
-To explore the notebooks:
-
-bash
-Copy
-Edit
 jupyter notebook
-Or, open this folder in VS Code, and run notebooks with the Jupyter extension.
-
-🛠 Optional Notes
-If you update the environment, you can regenerate the file with:
-
-bash
-Copy
-Edit
-pip freeze > requirements.txt
-Never include the venv/ folder in your repo — it's already excluded in .gitignore.
-
-yaml
-Copy
-Edit
-
----
-
-## ✅ What To Do Next
-
-Now you can:
-- ✅ Paste this into your existing `README.md` file
-- ✅ Commit it:
-
-```bash
-git add README.md
-git commit -m "Update README with clean requirements.txt setup instructions"
-git push
