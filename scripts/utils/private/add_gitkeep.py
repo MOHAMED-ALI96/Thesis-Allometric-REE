@@ -1,24 +1,15 @@
-import os
+from pathlib import Path
 
-def remove_gitkeep_files(root_dir):
-    removed = []
-    for foldername, _, filenames in os.walk(root_dir):
-        for filename in filenames:
-            if filename == ".gitkeep":
-                file_path = os.path.join(foldername, filename)
-                os.remove(file_path)
-                removed.append(file_path)
-    return removed
+# Set project root
+BASE_DIR = Path(__file__).resolve().parent.parent
 
-if __name__ == "__main__":
-    # Set root to 'scripts/' directory
-    scripts_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-    removed_files = remove_gitkeep_files(scripts_root)
+# Scan all subfolders
+for folder in BASE_DIR.rglob("*"):
+    if folder.is_dir():
+        files = list(folder.iterdir())
+        if not any(f.is_file() for f in files):  # If no files inside
+            gitkeep = folder / ".gitkeep"
+            gitkeep.touch()
+            print(f"Added .gitkeep to: {folder.relative_to(BASE_DIR)}")
 
-    if removed_files:
-        print("🗑️ Removed the following .gitkeep files:")
-        for path in removed_files:
-            print(f" - {path}")
-    else:
-        print("✅ No .gitkeep files found in the 'scripts' folder.")
-
+print("\n✅ All empty folders now have .gitkeep files.")
