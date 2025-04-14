@@ -1,45 +1,56 @@
 from pathlib import Path
 
-# ✅ Project root directory (Thesis-Allometric-REE/)
+# Define root paths
 ROOT_DIR = Path(__file__).resolve().parents[3]
-
-# 📁 Data folders
 DATA_DIR = ROOT_DIR / "data"
+PLOTS_DIR = ROOT_DIR / "plots"
+RESULTS_DIR = ROOT_DIR / "results"
+NOTEBOOKS_DIR = ROOT_DIR / "notebooks"
+SCRIPTS_DIR = ROOT_DIR / "scripts"
+BASH_DIR = ROOT_DIR / "bash"
+THESIS_DIR = ROOT_DIR / "thesis"
+
+# Data subdirectories
 PUBLIC_DATA_DIR = DATA_DIR / "public"
 PRIVATE_DATA_DIR = DATA_DIR / "private"
 
-# 📁 Public data files (commonly used)
+# CSV files
 CSV_325 = PUBLIC_DATA_DIR / "targeted_organs_325.csv"
 CSV_51 = PUBLIC_DATA_DIR / "targeted_organs_full_brain_51.csv"
+CSV_ALL_325 = PUBLIC_DATA_DIR / "all_organs_325.csv"
+CSV_ALL_51 = PUBLIC_DATA_DIR / "all_organs_full_brain_51.csv"
 
-# 📁 Plot output folders
-PLOTS_DIR = ROOT_DIR / "plots"
+# Plot paths
+PLOTS_DESCRIPTION = PLOTS_DIR / "00_data_description"
+PLOTS_CONTRIBUTION = PLOTS_DIR / "01_organ_contribution"
+PLOTS_MODEL_SELECTION = PLOTS_DIR / "02_model_exploration_in_organs_selection"
+PLOTS_GENERAL_MODEL = PLOTS_DIR / "03_primary_general_allometric_model"
+PLOTS_SUBJECT_LINEAR = PLOTS_DIR / "04_linear_model_subject_level"
+PLOTS_POLYNOMIAL = PLOTS_DIR / "05_polynomial_model"
+PLOTS_MIXED_EFFECT = PLOTS_DIR / "06_mixed_effect_model"
+PLOTS_VALIDATION = PLOTS_DIR / "07_model_validation"
+PLOTS_SIGNIFICANCE = PLOTS_DIR / "08_significance_testing"
 
-PLOTS_DESCRIPTION = PLOTS_DIR / "01_data_description"
-PLOTS_CONTRIBUTION = PLOTS_DIR / "02_organ_contribution"
-PLOTS_SCATTER = PLOTS_DIR / "03_scatter_exploration"
-PLOTS_MODELING = PLOTS_DIR / "04_modeling"
-PLOTS_LINEAR = PLOTS_DIR / "05_linear_model_analysis"
-PLOTS_SIGNIFICANCE = PLOTS_DIR / "06_significance_tests"
-PLOTS_CV_LINEAR = PLOTS_DIR / "07_cross_validation_linear"
-PLOTS_POLY = PLOTS_DIR / "08_polynomial_model"
-PLOTS_CV_POLY = PLOTS_DIR / "09_cross_validation_poly"
-PLOTS_COMPARISON = PLOTS_DIR / "10_model_comparison"
-PLOTS_MIXED = PLOTS_DIR / "11_mixed_effects"
-PLOTS_AGE = PLOTS_DIR / "12_age_analysis"
-PLOTS_VOLUME = PLOTS_DIR / "13_volume_change"
+# Results paths
+RESULTS_CONTRIBUTION = RESULTS_DIR / "01_organ_contribution"
+RESULTS_MODEL_SELECTION = RESULTS_DIR / "02_model_exploration_in_organs_selection"
+RESULTS_GENERAL_MODEL = RESULTS_DIR / "03_primary_general_allometric_model"
+RESULTS_SUBJECT_LINEAR = RESULTS_DIR / "04_linear_model_subject_level"
+RESULTS_POLYNOMIAL = RESULTS_DIR / "05_polynomial_model"
+RESULTS_MIXED_EFFECT = RESULTS_DIR / "06_mixed_effect_model"
+RESULTS_VALIDATION = RESULTS_DIR / "07_model_validation"
+RESULTS_SIGNIFICANCE = RESULTS_DIR / "08_significance_testing"
 
-# 📁 Results output folders
-RESULTS_DIR = ROOT_DIR / "results"
-
-RESULTS_ORGAN_STATS = RESULTS_DIR / "organwise_stats"
-RESULTS_MODELS = RESULTS_DIR / "model_results"
-RESULTS_SIGNIFICANCE = RESULTS_DIR / "significance_tests"
-RESULTS_CV = RESULTS_DIR / "cv_results"
-RESULTS_POLY = RESULTS_DIR / "polynomial_vs_linear"
-RESULTS_MIXED = RESULTS_DIR / "mixed_effects"
-RESULTS_AGE = RESULTS_DIR / "age_effects"
- 
-# 📁 Notebooks & Thesis
-NOTEBOOKS_DIR = ROOT_DIR / "notebooks"
-THESIS_DIR = ROOT_DIR / "thesis"
+# Scripts subfolders
+SCRIPTS_PREPROCESSING = SCRIPTS_DIR / "00_preprocessing"
+SCRIPTS_CONTRIBUTION = SCRIPTS_DIR / "01_organ_contribution"
+SCRIPTS_MODEL_SELECTION = SCRIPTS_DIR / "02_model_exploration_in_organs_selection"
+SCRIPTS_GENERAL_MODEL = SCRIPTS_DIR / "03_primary_general_allometric_model"
+SCRIPTS_SUBJECT_LINEAR = SCRIPTS_DIR / "04_linear_model_subject_level"
+SCRIPTS_POLYNOMIAL = SCRIPTS_DIR / "05_polynomial_model"
+SCRIPTS_COHORT_LINEAR = SCRIPTS_DIR / "06_linear_model_full_cohort"
+SCRIPTS_VALIDATION = SCRIPTS_DIR / "07_model_validation"
+SCRIPTS_SIGNIFICANCE = SCRIPTS_DIR / "08_significance_testing"
+SCRIPTS_UTILS = SCRIPTS_DIR / "utils"
+SCRIPTS_UTILS_PUBLIC = SCRIPTS_UTILS / "public"
+SCRIPTS_UTILS_PRIVATE = SCRIPTS_UTILS / "private"       
